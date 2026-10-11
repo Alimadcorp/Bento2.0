@@ -1,71 +1,81 @@
 body {
-    background-image: linear-gradient(to top, #f7e0b6, #d29723);
-    height: 100dvh;
-    font-family: "Line Seed JP", sans-serif;
-    text-align: center;
-    padding: 0;
-    margin: 0;
+  background-image: linear-gradient(to top, #f7e0b6, #d29723);
+  height: 100dvh;
+  font-family: 'Line Seed JP', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 300%;
-    margin: 0;
+  font-weight: bold;
+  font-size: 300%;
+  margin: 0;
 }
 
 .main {
-    overflow-y: scroll;
-    height: 100dvh;
+  overflow-y: scroll;
+  height: 100dvh;
 }
 
 .main > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .main > div > a {
-    text-decoration: none;
-    width: 100%;
-    color: inherit;
-    border-left: 2px saddlebrown solid;
+  text-decoration: none;
+  width: 100%;
+  color: inherit;
+  border-left: 2px saddlebrown solid;
 }
 
 .main > div > a > section {
-    flex-grow: 1;
-    filter: blur(4px);
-    transition: background-color 1s ease, filter 1s ease;
+  flex-grow: 1;
+  filter: blur(4px);
+  transition: background-color 1s ease, filter 1s ease;
+}
+
+@media (max-width: 500px) {
+  .main > div {
+    grid-template-columns: 1fr;
+  }
+
+  .main > div > a > section {
+    filter: blur(0px);
+  }
 }
 
 .main > div > a > section:hover {
-    background-color: #fff5;
-    filter: blur(0px);
+  background-color: #fff5;
+  filter: blur(0px);
 }
 
 section {
-    border-bottom: 2px saddlebrown solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  border-bottom: 2px saddlebrown solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .lid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
 }
 
 .dot {
-    padding: 100px;
-    height: 20dvh;
+  padding: 100px;
+  height: 20dvh;
 }
 
 ::selection {
-    background-color: #f7e0b6;
-    color: #573900;
+  background-color: #f7e0b6;
+  color: #573900;
 }
